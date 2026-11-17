@@ -86,6 +86,7 @@ a {
 }
 
 .home-info h2 {
+    position: relative;
     display: inline-block;
     font-size: 32px;
     margin-top: -10px;
@@ -105,7 +106,7 @@ a {
 
 /* Text Typing Animation */
 .home-info h2 span {
-    position: absolute;
+    position: relative;
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: .7px #7cf03d;

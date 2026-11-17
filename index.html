@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website Using HTML & CSS</title>
+    <!-- Boxicons (আইকনের জন্য) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio.</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#portfolio">Project/Portfolio</a></li>
+        </ul>
+    </nav>
+    
+    <!-- BACKGROUND ANIMATION BARS -->
+    <div class="bar-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <!-- HOME SECTION -->
+    <section class="home">
+        <div class="home-info">
+            <h1>Tofail Hossain</h1>
+            <h2> I'm a &nbsp;
+                <span style="--i:4;" data-text="Frontend Developer">Frontend Developer</span>
+                <span style="--i:3;" data-text="Graphic Designer">Graphic Designer</span>
+                <span style="--i:2;" data-text="Office Work Expert">Office Work Expert</span>
+                <span style="--i:1;" data-text="Digital Marketer">Digital Marketer</span>
+            </h2>
+            <p>I am a versatile IT Specialist with a diverse skill set spanning across Web Development, Graphic Design, Software Support, and Office Management. As a tech professional, I love solving problems and turning ideas into impactful digital realities.</p>
+            <div class="btn-sci">
+                <a href="https://drive.google.com/uc?export=download&id=1FDuzC45vCMxXqVu_YJhe9QUq6w6kuw2A" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="https://www.linkedin.com/in/tofail-hossain-729501238/"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.facebook.com/md.tofail.hossain.129885"><i class='bx bxl-facebook'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="home.png" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <h2>About <span>Me</span></h2>
+        <div class="about-content">
+            <p>I am an IT Specialist who bridges the gap between technology, design, and management. My passion is to provide all-in-one IT solutions for businesses and individuals.</p>
+            <p>My core expertise includes Web Development, Graphic Design, Software Support, and Office Management. I thrive in fast-paced environments and am always eager to learn new technologies to solve real-world problems.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <h2>Our <span>Services</span></h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>Crafting functional, clean, and responsive websites using modern layouts.</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-palette'></i>
+                <h3>Graphic Design</h3>
+                <p>Creating attractive visuals, creative logos, and social media branding.</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-support'></i>
+                <h3>Software Support</h3>
+                <p>System troubleshooting, installation, maintenance, and technical assistance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <h2>Contact <span>Me</span></h2>
+        <p>Have a project in mind or need technical support? Let's talk!</p>
+        <a href="tofailh528@gmail.com" class="btn">Email Me</a>
+    </section>
+
+    <!-- ==================== PORTFOLIO/PROJECT SECTION ==================== -->
+    <section id="portfolio" class="services-section" style="background: #1f242d;">
+        <h2>My <span>Projects</span></h2>
+        <div class="services-container">
+            
+            <!-- ১ম প্রজেক্ট বক্স -->
+            <div class="service-box">
+                <i class='bx bx-laptop'></i>
+                <h3>E-commerce Website</h3>
+                <p>A fully responsive online shop built with HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <!-- ২য় প্রজেক্ট বক্স -->
+            <div class="service-box">
+                <i class='bx bx-edit-alt'></i>
+                <h3>Graphic Design Portfolio</h3>
+                <p>Collection of creative logos, banners, and social media branding designs.</p>
+            </div>
+
+            <!-- ৩য় প্রজেক্ট বক্স -->
+            <div class="service-box">
+                <i class='bx bx-task'></i>
+                <h3>Office Management Tool</h3>
+                <p>A software solution designed to optimize daily office workflows and tasks.</p>
+            </div>
+
+        </div>
+    </section>
+
+<script>
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('.navbar ul li');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(li => {
+                li.classList.remove('active');
+                if (li.querySelector('a').getAttribute('href') === `#${current}`) {
+                    li.classList.add('active');
+                } else if (current === '' && li.querySelector('a').getAttribute('href') === '#') {
+                    li.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

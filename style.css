@@ -341,3 +341,38 @@ a {
     margin-bottom: 30px;
     font-size: 18px;
 }
+
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: auto;
+        padding: 120px 5% 50px;
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 38px;
+    }
+
+    .home-info h2 {
+        font-size: 24px;
+        height: 35px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+    }
+
+    .home-img .img-box {
+        width: 60vw;
+        height: 60vw;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+}
